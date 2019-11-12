@@ -1,12 +1,12 @@
 import urllib2,os,MySQLdb
 count=0
 # Configure MySQL Connections Here
-host="localhost" # MySQL Hostname
+host="MYSQL_HOSTNAME_HERE" # MySQL Hostname
 user="MYSQL_USERNAME_HERE" # MySQL Username
 sqlpass="MYSQL_PASSWORD_HERE" # MySQL password
 db = MySQLdb.connect(host,user,sqlpass,"squid")
 c = db.cursor()
-pas=[" ","rgukt123","space","iiitn","darling","darling143","darling123","rgukt123*","rgukt123$","password","rgukt321","rgukt143","wrongpassword","amma","ammananna","priya","alliswell","iloveyou","ILoveYou","imissyou","missyou","loveyou","143","*","ok","crazy","raviteja","prabhas","amen","786","jesus","jesus123","king","anesh","harshith","harsha","pavan","oye","oy","powerstar","pavankalyan","root","chandu","bujji","haihai","sairam"]
+pas=[] # Load your passwords to this list
 print "[+] Connecting to MySQL Database...."
 c.execute("CREATE DATABASE IF NOT EXISTS `squid`;")
 c.execute("CREATE TABLE IF NOT EXISTS `passwords` (`uid` varchar(100) NOT NULL,`password` varchar(100) NOT NULL,PRIMARY KEY (`uid`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;")
